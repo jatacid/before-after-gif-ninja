@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Before/After Gif Ninja</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+
+<body>
+  <div id="app">
+    <h1>Before/After Gif Ninja</h1>
+    <div class="section">
+      <div id="slidesContainer" class="slides"></div>
+      <button id="addSlideBtn" class="add-slide">+ Add image</button>
+    </div>
+    <div class="section">
+      <div class="settings">
+        <div class="setting">
+          <label class="checkbox-label">
+            <input id="showNames" type="checkbox" /> Show slide name in GIF
+          </label>
+        </div>
+        <div class="setting">
+          <label for="scalePercent">Output scale (%)</label>
+          <input id="scalePercent" type="number" step="5" min="10" max="200" value="100" />
+        </div>
+        <div class="setting">
+          <label for="animType">Animation type</label>
+          <select id="animType">
+            <option value="wipe">Wipe</option>
+            <option value="crossfade">Crossfade</option>
+            <option value="slide">Slide</option>
+            <option value="zoom">Zoom crossfade</option>
+            <option value="dip">Dip to white</option>
+          </select>
+        </div>
+        <div class="setting">
+          <label for="holdSeconds">Time on each image (seconds)</label>
+          <input id="holdSeconds" type="number" inputmode="decimal" step="0.1" min="0" value="2.0" />
+        </div>
+        <div class="setting">
+          <label for="wipeSeconds">Animation speed (wipe, seconds)</label>
+          <input id="wipeSeconds" type="number" inputmode="decimal" step="0.1" min="0.1" value="0.5" />
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <button id="buildBtn" disabled>Build .gif</button>
+      <span id="status"></span>
+    </div>
+    <div class="output">
+      <div id="gifPreview"></div>
+      <div class="actions" id="gifActions" hidden>
+        <a id="downloadBtn" download="before-after.gif">Download</a>
+      </div>
+      <div class="actions">
+        <a href="https://www.paypal.com/donate/?hosted_button_id=9VFG2KJ8HW6EW" target="_blank" class="donate-btn">☕ Buy me a coffee</a>
+      </div>
+    </div>
+  </div>
+  <script src="../vendor/gif.js"></script>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+
+</html>

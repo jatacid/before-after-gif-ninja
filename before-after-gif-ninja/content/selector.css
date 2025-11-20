@@ -1,0 +1,29 @@
+/* Overlay styles for drag-to-select */
+.before-after-gif-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  cursor: crosshair;
+  pointer-events: auto;
+}
+.before-after-gif-mask {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+.before-after-gif-rect {
+  position: absolute;
+  border: 2px solid #4f46e5;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.7) inset;
+  background: rgba(79,70,229,0.1);
+}
+
+.before-after-gif-guide {
+  position: absolute;
+  border: 2px dashed rgba(79,70,229,0.5);
+  background: rgba(79,70,229,0.08);
+  pointer-events: none;
+}
+
+/* When overlay is temporarily removed for capture, nothing is painted.
+   Keep styles otherwise to ensure good UX while dragging. */
