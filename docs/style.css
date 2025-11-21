@@ -90,6 +90,7 @@ nav {
   margin-bottom: 1.5rem;
   background: linear-gradient(to right, #ec4899, #8b5cf6);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -219,5 +220,41 @@ footer a:hover {
   .nav {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+/* New styles for added media */
+.hero-video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.screenshot-grid img:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }

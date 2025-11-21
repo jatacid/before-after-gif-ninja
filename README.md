@@ -2,6 +2,13 @@
 
 Create a looping before/after animated GIF by selecting two screenshots from the current page. Everything runs locally; no network APIs used.
 
+## Demo
+
+[Watch the demo video](docs/assets/hero_video.webm)
+
+![Interface Screenshot 1](docs/assets/screenshot1.png)
+![Interface Screenshot 2](docs/assets/screenshot2.png)
+
 ## How it works
 
 - Click the extension icon to open the Side Panel.
