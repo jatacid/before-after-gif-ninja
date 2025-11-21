@@ -74,16 +74,47 @@ button[disabled] {
 
 .inline-btn {
   padding: 6px 12px;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 86px;
+  height: 36px;
+  border-radius: 8px;
 }
 
 .danger {
-  background: var(--danger-color);
+  /* Make delete a muted grey with dark text for clarity */
+  background: #e5e7eb;
+  color: #111827;
 }
 
 .danger:hover {
-  background: #dc2626;
+  background: #d1d5db;
+}
+
+/* Slide actions container: keep inline buttons spaced and aligned */
+.slide-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Make the slide title look editable */
+.slide-title {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.02);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: text;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.slide-title:hover {
+  background: rgba(255,255,255,0.04);
 }
 
 /* Slides */
@@ -113,11 +144,6 @@ button[disabled] {
   margin-bottom: 8px;
 }
 
-.slide-title {
-  font-weight: 600;
-  color: var(--text-color);
-  font-size: 0.9rem;
-}
 
 .thumb {
   width: 100%;
@@ -210,15 +236,20 @@ button[disabled] {
   flex-wrap: wrap;
 }
 
-.donate-btn {
-  background: #ffc439 !important;
-  color: #000 !important;
+.donate-link {
+  background: none !important;
+  color: var(--text-muted) !important;
+  text-decoration: underline;
+  font-weight: 600;
   width: 100%;
+  text-align: center;
+  padding: 6px 0;
   margin-top: 8px;
 }
 
-.donate-btn:hover {
-  background: #f4bb2e !important;
+.donate-link:hover {
+  color: var(--text-color) !important;
+  text-decoration: none;
 }
 
 .actions a {
