@@ -2,6 +2,10 @@
 
 Create a looping before/after animated GIF by selecting two screenshots from the current page. Everything runs locally; no network APIs used.
 
+## Download
+
+Download the latest release from [GitHub Releases](https://github.com/jatacid/before-after-gif-ninja/releases).
+
 ## Demo
 
 [Watch the demo video](docs/assets/hero_video.webm)
