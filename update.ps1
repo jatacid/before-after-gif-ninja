@@ -29,7 +29,7 @@ if (!(Test-Path $releasesDir)) {
 }
 $zipName = "before-after-gif-ninja-v$newVersion.zip"
 $zipPath = Join-Path $releasesDir $zipName
-Compress-Archive -Path "before-after-gif-ninja" -DestinationPath $zipPath -Force
+Compress-Archive -Path "before-after-gif-ninja\*" -DestinationPath $zipPath -Force
 
 # Commit all changes (including new zip and version bump)
 git add .
